@@ -227,7 +227,7 @@
   <input type="text" id="newEventName" placeholder="e.g. Concert — City Hall">
   <label>Units required</label>
   <input type="text" id="newEventCount" placeholder="e.g. 30" inputmode="numeric">
-  <button class="btn btn-primary" onclick="createEvent()">Create & switch to this event</button>
+  <button class="btn btn-primary" onclick="createEventEntry()">Create & switch to this event</button>
   <button class="btn btn-ghost" onclick="closeAllSheets()">Cancel</button>
 </div>
 
@@ -544,7 +544,7 @@ function openNewEvent(){
   document.getElementById('newEventCount').value='';
   showSheet('eventSheet');
 }
-function createEvent(){
+function createEventEntry(){
   const name = document.getElementById('newEventName').value.trim();
   const count = parseInt(document.getElementById('newEventCount').value, 10);
   if(!name){ toast('Enter an event name'); return; }
